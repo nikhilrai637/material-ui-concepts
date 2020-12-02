@@ -6,7 +6,19 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button onClick={()=> alert("got Clicked")} variant = "contained" color="secondary" >Click Me!</Button>
+        <Button onClick={()=> alert("got Clicked")}
+         disabled = {false}  
+         size = "large"
+         style={{
+           color :  "blueColor",
+           fontSize : "54px"
+         }}
+
+         variant = "contained" 
+         color="secondary"
+          >
+           Click Me!
+           </Button>
         <img src={logo} className="App-logo" alt="logo" />
       
         <a
