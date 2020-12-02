@@ -41,7 +41,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <TextField/>
+        <TextField
+        variant = "outlined"
+        color ="secondary"
+        type = "email"
+        label = "The time"
+        size = "large"
+        placeholder = "type@type.com"
+        />
         <CheckBoxExample/>
 
         <ButtonGroup variant="contained" color="primary">
