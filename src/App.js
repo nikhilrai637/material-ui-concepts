@@ -17,6 +17,8 @@ function CheckBoxExample () {
       control={
         <CheckBox
         color="primary"
+        icon = {<SaveIcon/>}
+        checkedIcon = {<DeleteIcon/>}
         checked = {checked}
         onChange={(event) =>setChecked(event.target.checked)}
         inputProps = {{'arie-label' : 'secondary checkbox'}}
@@ -24,7 +26,7 @@ function CheckBoxExample () {
         /> 
       }
 
-      label = {"Checkbox label"}
+      label = {"Checkbox label "}
       /> 
 
     </div>
