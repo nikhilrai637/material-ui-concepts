@@ -1,18 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import Button from '@material-ui/core/Button';
-
+import SaveIcon from '@material-ui/icons/Save'
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Button onClick={()=> alert("got Clicked")}
-         disabled = {false}  
-         size = "large"
-         style={{
-           color :  "blueColor",
-           fontSize : "54px"
-         }}
+         
+          startIcon = {<SaveIcon/>}
 
          variant = "contained" 
          color="secondary"
