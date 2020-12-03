@@ -8,6 +8,7 @@ import DeleteIcon from '@material-ui/icons/Delete'
 import CheckBox from '@material-ui/core/CheckBox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
 import {makeStyles , ThemeProvider , createMuiTheme } from '@material-ui/core/styles';
 import {orange , brown,purple} from '@material-ui/core/colors'
 import 'fontsource-roboto'
@@ -76,6 +77,9 @@ function App() {
     <ThemeProvider theme = {theme}>
     <div className="App">
       <header className="App-header">
+        <Typography>
+          Welcome to MUI
+          </Typography>
         <ButtonStyled/>
         <TextField
         variant = "outlined"
@@ -118,6 +122,7 @@ function App() {
         >
           Learn React
         </a>
+       
       </header>
     </div>
     </ThemeProvider>
