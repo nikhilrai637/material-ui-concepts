@@ -77,8 +77,11 @@ function App() {
     <ThemeProvider theme = {theme}>
     <div className="App">
       <header className="App-header">
-        <Typography>
+        <Typography variant = 'h2'>
           Welcome to MUI
+          </Typography>
+          <Typography variant = 'body1'>
+            Learn how to use Material UI
           </Typography>
         <ButtonStyled/>
         <TextField
