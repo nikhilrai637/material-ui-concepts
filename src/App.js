@@ -8,6 +8,40 @@ import DeleteIcon from '@material-ui/icons/Delete'
 import CheckBox from '@material-ui/core/CheckBox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import TextField from '@material-ui/core/TextField';
+import {makeStyles , ThemeProvider , createMuiTheme } from '@material-ui/core/styles';
+import {orange , brown,purple} from '@material-ui/core/colors'
+import 'fontsource-roboto'
+
+const useStyles = makeStyles({
+
+  root : {
+    background : 'linear-gradient(45deg , #FE6B8B , #FF8E53)',
+    border : 0,
+    marginBottom : 15,
+    borderRadius : 15,
+    color : 'white',
+    padding : '5px 20px'
+  }
+
+})
+
+const theme = createMuiTheme({
+  palette :{
+    primary : {
+      main : orange[500],
+    },
+    secondary :{
+      main : purple[500],
+    }
+  }
+})
+
+
+function ButtonStyled() {
+  const classes = useStyles();
+  return <Button className={classes.root}>Styled Button</Button>
+}
+
 
 
 function CheckBoxExample () {
@@ -17,7 +51,7 @@ function CheckBoxExample () {
       <FormControlLabel
       control={
         <CheckBox
-        color="primary"
+        color="secondary"
         icon = {<SaveIcon/>}
         checkedIcon = {<DeleteIcon/>}
         checked = {checked}
@@ -39,8 +73,10 @@ function CheckBoxExample () {
 
 function App() {
   return (
+    <ThemeProvider theme = {theme}>
     <div className="App">
       <header className="App-header">
+        <ButtonStyled/>
         <TextField
         variant = "outlined"
         color ="secondary"
@@ -84,6 +120,7 @@ function App() {
         </a>
       </header>
     </div>
+    </ThemeProvider>
   );
 }
 
