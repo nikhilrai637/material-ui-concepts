@@ -11,6 +11,7 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles , ThemeProvider , createMuiTheme } from '@material-ui/core/styles';
 import {orange , brown,purple} from '@material-ui/core/colors'
+import {container} from '@material-ui/core/container'
 import 'fontsource-roboto'
 
 const useStyles = makeStyles({
@@ -27,6 +28,15 @@ const useStyles = makeStyles({
 })
 
 const theme = createMuiTheme({
+
+  typography : {
+    h2 : {
+      fontSize : 36,
+      marginBottom:0,
+      
+    }
+  },
+
   palette :{
     primary : {
       main : orange[500],
@@ -75,12 +85,13 @@ function CheckBoxExample () {
 function App() {
   return (
     <ThemeProvider theme = {theme}>
+      <container>
     <div className="App">
       <header className="App-header">
         <Typography variant = 'h2'>
           Welcome to MUI
           </Typography>
-          <Typography variant = 'body1'>
+          <Typography variant = 'body1' component = 'div'>
             Learn how to use Material UI
           </Typography>
         <ButtonStyled/>
@@ -128,6 +139,7 @@ function App() {
        
       </header>
     </div>
+    </container>
     </ThemeProvider>
   );
 }
