@@ -10,10 +10,15 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles , ThemeProvider , createMuiTheme } from '@material-ui/core/styles';
-import {orange , brown,purple} from '@material-ui/core/colors'
+import {orange ,green , brown,purple} from '@material-ui/core/colors'
 import Container from '@material-ui/core/Container'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import MenuIcon from '@material-ui/core/Menu'
+import IconButton from '@material-ui/core/IconButton'
+
 import 'fontsource-roboto'
 
 const useStyles = makeStyles({
@@ -39,14 +44,7 @@ const theme = createMuiTheme({
     }
   },
 
-  palette :{
-    primary : {
-      main : orange[500],
-    },
-    secondary :{
-      main : purple[500],
-    }
-  }
+  
 })
 
 
@@ -90,6 +88,19 @@ function App() {
       <Container maxWidth = "sm">
     <div className="App">
       <header className="App-header">
+        <AppBar>
+          <Toolbar>
+            <IconButton>
+              <MenuIcon />
+            </IconButton>
+            <Typography variant = "h6">
+              MUI THEMING
+            </Typography>
+            <Button>
+              Login
+            </Button>
+          </Toolbar>
+        </AppBar>
         <Typography variant = 'h2'>
           Welcome to MUI
           </Typography>
