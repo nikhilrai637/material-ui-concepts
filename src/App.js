@@ -11,7 +11,9 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles , ThemeProvider , createMuiTheme } from '@material-ui/core/styles';
 import {orange , brown,purple} from '@material-ui/core/colors'
-import {container} from '@material-ui/core/container'
+import Container from '@material-ui/core/Container'
+import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
 import 'fontsource-roboto'
 
 const useStyles = makeStyles({
@@ -85,7 +87,7 @@ function CheckBoxExample () {
 function App() {
   return (
     <ThemeProvider theme = {theme}>
-      <container>
+      <Container maxWidth = "sm">
     <div className="App">
       <header className="App-header">
         <Typography variant = 'h2'>
@@ -95,6 +97,18 @@ function App() {
             Learn how to use Material UI
           </Typography>
         <ButtonStyled/>
+        <Grid container spacing={4}  justify = 'center' >
+          <Grid item xs = {3} sm = {6}>
+            <Paper style = {{height:75 , width:'100%'}}   />
+          </Grid>
+          <Grid item xs = {3} sm = {6}  >
+            <Paper style = {{height:75 , width:'100%'}}   />
+          </Grid>
+          <Grid item xs = {3} sm = {6} lg = {12}>
+            <Paper style = {{height:75 , width:'100%'}}    />
+          </Grid>
+        </Grid>
+
         <TextField
         variant = "outlined"
         color ="secondary"
@@ -139,7 +153,7 @@ function App() {
        
       </header>
     </div>
-    </container>
+    </Container>
     </ThemeProvider>
   );
 }
