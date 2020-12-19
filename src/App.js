@@ -1,25 +1,37 @@
  
-import React from 'react'
+import React ,{useState} from 'react'
 import './App.css';
 import { Button } from '@material-ui/core';
-import { ThemeProvider} from '@material-ui/core/styles';
+import { ThemeProvider , createMuiTheme} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import theme from './Theme'
+// import theme from './Theme'
 import { makeStyles } from '@material-ui/core/styles';
 import {Grid} from '@material-ui/core'
 import Header from './Header'
 import Content from './Content';
 import CodeButton from './CodeButton'
 import Paper from './Paper'
-import Switch from './Switch'
+import Switches from './Switch'
 
 import TYPOGRAPHY from './TYPOGRAPHY'
+import Switch from '@material-ui/core/Switch';
 
 
- 
-   
+
   
 function App() {
+
+  const [darkMode, setdarkMode] = useState(false);
+
+  const theme = createMuiTheme({
+    palette: {
+      type: darkMode ? 'dark' : 'light',
+    },
+  });
+     
+
+
+
    return (
   //  <div>
   //    <Grid container direction = "column">
@@ -46,8 +58,8 @@ function App() {
  
   <div>
   <ThemeProvider theme = {theme} >
-
-  <Switch/>
+  <Switch onChange = {() =>  setdarkMode(prevVal => !prevVal) }/>
+  <Switches/>
   
   </ThemeProvider>
   </div>

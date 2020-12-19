@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Grid ,Paper, Typography , Button } from '@material-ui/core'
-function Switch() {
+
+function Switches() {
+
+    
     return (
         <div>
+            
             <Paper  style = {{height : "100vh"}}>
                <Grid container direction = "column">
                    <Typography variant = "h1">
@@ -21,4 +25,4 @@ function Switch() {
     )
 }
 
-export default Switch
+export default Switches
