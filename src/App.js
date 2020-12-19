@@ -10,7 +10,9 @@ import {Grid} from '@material-ui/core'
 import Header from './Header'
 import Content from './Content';
 import CodeButton from './CodeButton'
- 
+import Paper from './Paper'
+
+import TYPOGRAPHY from './TYPOGRAPHY'
 
 
  
@@ -35,10 +37,17 @@ function App() {
   //    </Grid>
   //  </div>    
 
+  // <div>
+  //  <CodeButton cool = {false}></CodeButton>
+  // </div>
+ 
   <div>
-   <CodeButton cool = {false}></CodeButton>
+  <ThemeProvider theme = {theme} >
+  <TYPOGRAPHY/>
+  <Paper/>
+  
+  </ThemeProvider>
   </div>
-
 
     
  
