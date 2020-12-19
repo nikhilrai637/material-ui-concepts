@@ -11,6 +11,7 @@ import Header from './Header'
 import Content from './Content';
 import CodeButton from './CodeButton'
 import Paper from './Paper'
+import Switch from './Switch'
 
 import TYPOGRAPHY from './TYPOGRAPHY'
 
@@ -39,12 +40,14 @@ function App() {
 
   // <div>
   //  <CodeButton cool = {false}></CodeButton>
+  // <TYPOGRAPHY/>
+  // <Paper/>
   // </div>
  
   <div>
   <ThemeProvider theme = {theme} >
-  <TYPOGRAPHY/>
-  <Paper/>
+
+  <Switch/>
   
   </ThemeProvider>
   </div>
